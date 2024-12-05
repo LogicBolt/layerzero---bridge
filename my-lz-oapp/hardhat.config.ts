@@ -54,17 +54,17 @@ const config: HardhatUserConfig = {
         ],
     },
     networks: {
-        "ethereum": {
+        ethereum: {
             eid: EndpointId.ETHEREUM_V2_MAINNET, // from @layerzerolabs/lz-definitions
             url: process.env.RPC_URL_ETHEREUM || 'https://eth-pokt.nodies.app',
             accounts,
         },
         'sepolia-testnet': {
             eid: EndpointId.SEPOLIA_V2_TESTNET,
-            url: process.env.RPC_URL_SEPOLIA || 'https://rpc.sepolia.org/',
+            url: process.env.RPC_URL_SEPOLIA || 'https://ethereum-sepolia-rpc.publicnode.com',
             accounts,
             oftAdapter: {
-                tokenAddress: '0x0', // Set the token address for the OFT adapter
+                tokenAddress: '0x2c62b6169fc7aa02cccae82ed3528290e51289a2', // Set the token address for the OFT adapter
             },
         },
         'avalanche-testnet': {
